@@ -1,0 +1,320 @@
+:root {
+    counter-reset: headings;
+    --primary-color: #573804 ;
+    --secondary-color: #e74c3c;
+    --font-sizeh1: 12px;
+    --font-sizeh2: 12px;
+    --font-sizeh3: 12px;
+    --font-sizeh4: 12px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #EAEAEA;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+
+}
+
+main {
+    flex-grow: 1; /* Allow the main content to grow and take up remaining space */
+}
+
+
+
+.error {
+    color: #FF0000
+}
+
+.container {
+    background-color: rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center center; 
+    background-repeat: no-repeat; 
+}
+
+header {
+    height: 50px;
+    background-color: #eaeaea41;
+    margin: 5px;
+    padding: 10px 0;
+}
+
+header a {
+    color: #0e0b0b6d;
+    text-decoration: none;
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    border: 1px solid #070707; /* Add border style and width */
+}
+
+
+.header-content {
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+    background-image: url('../images/Chocolate.png'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+h1 {
+    
+    color: var(--primary-color); /* Set the text color to the primary color */
+    font-size: var(--font-sizeh1);
+  }
+  
+  h1::before {
+    
+    margin-right: 0.5em;
+    color: var(--primary-color); /* Set the counter color to the primary color */
+  }
+
+h2 {
+    
+    color: var(--primary-color); /* Set the text color to the primary color */
+    font-size: var(--font-size);
+  }
+
+nav {
+    margin: 0;
+    text-align: center; 
+    background-color: #772121; 
+    padding: 10px 0;
+    color: #ddd;; 
+    overflow: hidden; /* Clear any floated elements within the navigation bar */
+}
+
+nav a {
+    color: #fff; 
+    text-decoration: none; /* Remove underlines from links */
+    padding: 10px 20px; 
+    display: inline-block; /* Make links display as blocks for spacing control */
+    border: 1px solid #fff; 
+    border-radius: 4px; 
+
+}
+
+nav a:hover {
+    background-color: #471313;
+}
+
+.forms-container {
+    display: flex; /* Use flexbox for horizontal alignment */
+    justify-content: space-between; /* Spacing between forms */
+    align-items: flex-start; 
+    width: 100%; 
+    max-width: 800px; 
+    margin: 0 auto; 
+}
+
+.register-account{
+    display: inline-block; 
+    padding: 10px 20px; 
+    border-radius: 50%; 
+    background-color: #772121; 
+    color: #fff;
+    text-decoration: none; /* Remove underline from the link */
+}
+
+section a:hover {
+    background-color: #471313; /* Change the background color on hover */
+}
+
+
+footer {
+    background-color: #772121;
+    color: #f7f7f7;
+    padding: 20px; 
+    text-align: right; 
+}
+
+footer a {
+    color: #fff; /* White text color for navigation links */
+    text-decoration: none; /* Remove underlines from links */
+}
+
+footer a:hover {
+    color: #ffcc00;
+}
+
+
+.filterbar {
+    background-color: #f0f0f0;
+    padding: 20px;
+    width: 200px;
+    border-right: 1px solid #ddd;
+    float: right;
+}
+
+.filter-options {
+    margin-bottom: 20px;
+}
+
+.filter-label {
+    font-weight: bold;
+}
+
+.filter-checkbox {
+    display: block; 
+    margin-bottom: 5px; 
+}
+
+.catalog-text{
+    text-align: center;
+    margin: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: inline-block;
+    box-sizing: border-box; /* Include padding and border in the width */
+    vertical-align: top;
+}
+.catalog-scroll {
+        overflow-y: scroll; /* Add a vertical scrollbar when content overflows */
+        max-height: 100%; 
+}
+
+.img-border{
+    max-width: 100px;
+}
+
+
+aside {
+    float: right; /* Float the aside to the right */
+    width: 30%; /* Adjust the width as needed */
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+
+.aside_cart{
+    width: 200px;
+    height: 100%;
+    float: right; /* Float the cart menu to the right */
+    background-color: #f4f4f4;
+}
+
+.members {
+    padding: 20px;
+    margin: 20px;
+}
+
+.header-wrapicon1 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* Push the content to the right */
+}
+
+.user-icon {
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    margin-right: 10px; 
+}
+
+.header-cart {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.header-cart.show {
+    display: block;
+}
+
+
+#cart-panel {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Start hidden on the right side */
+    width: 300px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: right 0.3s;
+    z-index: 999;
+}
+
+#cart-items {
+    list-style: none;
+    padding: 0;
+}
+
+#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding: 10px;
+}
+
+#cart-items li:last-child {
+    border-bottom: none;
+}
+
+#cart-items img {
+    max-width: 50px;
+    max-height: 50px;
+    margin-right: 10px;
+}
+
+
+.sidebar {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: -250px;
+    background-color: #333;
+    padding-top: 60px;
+    transition: 0.3s;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+}
+
+.content {
+    margin-left: 0;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.toggle-btn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
