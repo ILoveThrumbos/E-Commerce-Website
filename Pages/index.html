@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chocolate Shop</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <a href="index.html">Home</a>
+            <a href="logout.php">logout</a>
+        </div>
+        <h1>CHOCOLATE FACTORY</h1>
+    </header>
+    <nav>
+        <div class="nav-content">
+            <div>
+                <a href="index.html">Home</a>
+                <a href="viewproducts_page.php">View All Products</a>
+                <a href="search_page.php">Search Product</a>
+                <a href="cartdisplay_page.php">
+                    <img src="../images/Cart.pnga" alt="Cart Icon">
+                </a>
+            </div>
+    </nav>
+    
+    <main>
+        <section class="container" align="center">
+            <a href="viewproducts_page.php">
+                <img src="../images/Chocolate.pngl" alt="Featured Item">
+            </a>
+        </section>
+        <div align="left">
+            <h2>Welcome to the Chocolate Shop</h2>
+            <p>Indulge in the finest chocolates you've ever tasted.</p>
+            <h2>Discover Our Delicious Chocolates</h2>
+            <p>
+                At the Chocolate Shop, we offer a wide range of exquisite chocolates
+                to satisfy your sweet cravings. Our chocolates are crafted with the
+                finest ingredients and a passion for perfection.
+            </p>
+
+            <h2>Why Choose Our Chocolates?</h2>
+            <ul>
+                <li>
+                    High-Quality Ingredients: We source the finest cocoa beans and
+                    ingredients to create our chocolates.
+                </li>
+                <li>
+                    Variety of Flavors: From rich dark chocolates to creamy milk
+                    chocolates, we have a flavor for every palate.
+                </li>
+                <li>
+                    Perfect Gifts: Our chocolates make for delightful gifts for special
+                    occasions and celebrations.
+                </li>
+            </ul>
+        </div>
+    </main>
+
+    <footer>
+        <div>
+            <a href="#">FAQ & Support |</a>
+            <a href="#">About Us |</a>
+            <a href="#">Our Services |</a>
+            <a href="#">Contact Us</a>
+        </div>
+        <p>&copy; 2023 Chocolate Factory</p>
+    </footer>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+            // Get a reference to the user icon and the dropdown menu
+    const userIcon = document.querySelector('.user-icon');
+    const dropdownMenu = document.querySelector('.header-cart');
+
+    // Add a click event listener to the user icon
+    userIcon.addEventListener('click', function () {
+    dropdownMenu.classList.toggle('show');
+    });
+
+    // Close the dropdown if the user clicks outside of it (optional)
+    window.addEventListener('click', function (event) {
+    if (!event.target.matches('.user-icon') && !event.target.matches('.header-cart')) {
+        if (dropdownMenu.classList.contains('show')) {
+            dropdownMenu.classList.remove('show');
+        }
+    }
+    });
+
+
+
+</script>
+
+</html>
